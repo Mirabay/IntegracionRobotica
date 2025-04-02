@@ -2,27 +2,14 @@
 <robot name="Puzzlebot_Jetson_Lidar_Ed.">
 
 <!--LINKS-->
-<link name="map"/>
-<link name="odom"/>
+
 <link name="base_footprint"/>
 <link name="base_link"/>
 <link name="wheel_left"/>
 <link name="wheel_right"/>
 <link name="case_link"/>
 <!--JOINTS-->
-<joint name="map_to_odom" type="fixed">
-  <parent link="map"/>
-  <child link="odom"/>
-  <origin xyz="1 0 0" rpy="0 0 0"/>
-</joint>
 
-<joint name="odom_to_base_footprint" type="continuous">
-    <parent link="odom"/>
-    <child link="base_footprint"/>
-    <origin xyz="1 0 0" rpy="0 0 0"/>
-    <limit lower="-0.78" upper=".78" effort="5" velocity="0.1"/>
-    <axis xyz="0 0 1"/>
-</joint>
 
 <joint name="base_link_joint" type="fixed">
   <parent link="base_footprint"/>

@@ -3,8 +3,8 @@
 <package format="3">
   <name>puzzlebot_sim</name>
   <version>0.0.0</version>
-  <description></description>
-  <maintainer email=></maintainer>
+  <description>Puzzlebot_simulation</description>
+  <maintainer email='tonyhauder@gmail.com'>Miranda</maintainer>
   <license>Apache-2.0</license>
 
   <depend>std_msgs</depend>

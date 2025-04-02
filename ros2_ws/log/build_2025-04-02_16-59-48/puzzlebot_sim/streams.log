@@ -1,0 +1,25 @@
+[0.437s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data
+[0.552s] running egg_info
+[0.552s] writing ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/PKG-INFO
+[0.552s] writing dependency_links to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/dependency_links.txt
+[0.552s] writing entry points to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/entry_points.txt
+[0.552s] writing requirements to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/requires.txt
+[0.552s] writing top-level names to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/top_level.txt
+[0.553s] reading manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[0.553s] adding license file 'LICENSE'
+[0.554s] writing manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[0.554s] running build
+[0.554s] running build_py
+[0.554s] copying puzzlebot_sim/joint_state_publisher.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.554s] running install
+[0.554s] running install_lib
+[0.555s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/joint_state_publisher.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.555s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/joint_state_publisher.py to joint_state_publisher.cpython-310.pyc
+[0.555s] running install_data
+[0.556s] running install_egg_info
+[0.557s] removing '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim-0.0.0-py3.10.egg-info' (and everything under it)
+[0.557s] Copying ../../build/puzzlebot_sim/puzzlebot_sim.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim-0.0.0-py3.10.egg-info
+[0.558s] running install_scripts
+[0.569s] Installing joint_state_publisher script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.569s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log'
+[0.585s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data

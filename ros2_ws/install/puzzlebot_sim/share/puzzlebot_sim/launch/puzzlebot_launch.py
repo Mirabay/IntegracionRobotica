@@ -50,7 +50,7 @@ def generate_launch_description():
 
     l_d = LaunchDescription([rviz2_pub_node,
                              robot_state_pub_node,
-                             joint_state_pub_node,
+                            #  joint_state_pub_node,
                              joint_state_publisher_node])
 
     return l_d

@@ -3,8 +3,8 @@
 <package format="3">
   <name>puzzlebot_sim</name>
   <version>0.0.0</version>
-  <description>Puzzlebot Kinematic Sim</description>
-  <maintainer email="mario.mtz@manchester-robotics.com">Mario Martinez</maintainer>
+  <description>Puzzlebot_simulation</description>
+  <maintainer email='tonyhauder@gmail.com'>Miranda</maintainer>
   <license>Apache-2.0</license>
 
   <depend>std_msgs</depend>
