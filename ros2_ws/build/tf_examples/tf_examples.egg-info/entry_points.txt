@@ -1,0 +1,3 @@
+[console_scripts]
+static_tf = tf_examples.static_tf:main
+

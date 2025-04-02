@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot name="Puzzlebot_Jetson_Lidar_Ed.">
+
+<!--LINKS-->
+<link name="map"/>
+<link name="odom"/>
+<link name="base_footprint"/>
+<link name="base_link"/>
+<link name="wheel_left"/>
+<link name="wheel_right"/>
+<link name="case_link"/>
+<!--JOINTS-->
+<joint name="map_to_odom" type="fixed">
+  <parent link="map"/>
+  <child link="odom"/>
+  <origin xyz="1 0 0" rpy="0 0 0"/>
+</joint>
+
+<joint name="odom_to_base_footprint" type="continuous">
+    <parent link="odom"/>
+    <child link="base_footprint"/>
+    <origin xyz="1 0 0" rpy="0 0 0"/>
+    <limit lower="-0.78" upper=".78" effort="5" velocity="0.1"/>
+    <axis xyz="0 0 1"/>
+</joint>
+
+<joint name="base_link_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 0.05" rpy="0 0 0"/>
+</joint>
+
+<joint name="wheel_left_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="wheel_left"/>
+  <origin xyz="0.052 0.095 -0.0025" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+
+</joint>
+
+<joint name="wheel_right_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="wheel_right"/>
+  <origin xyz="0.052 -0.095 -0.0025" rpy="0 0 0"/>
+  <axis xyz="0 1 0"/>
+</joint>
+
+<joint name="case_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="case_link"/>
+  <origin xyz="-0.095 0 -0.03" rpy="0 0 0"/>
+</joint>
+</robot>

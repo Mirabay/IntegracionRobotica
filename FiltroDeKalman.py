@@ -23,16 +23,19 @@ def kalman_filter():
     position_std = np.zeros(11)
     
     for k in range(0, 11):
+        print(f"\nPaso de tiempo {k}:")
         if k > 0:
             # Predicción
             mu_hat = A @ mu + B * a
             Sigma_hat = A @ Sigma @ A.T + Q
-            
+            print(f"Predicción: mu_hat = {mu_hat.flatten()}\nSigma_hat = {Sigma_hat}")
             # Corrección si hay medición
             if k in z_measurements:
                 K = Sigma_hat @ C.T @ np.linalg.inv(C @ Sigma_hat @ C.T + R)
                 mu = mu_hat + K * (z_measurements[k] - C @ mu_hat)
                 Sigma = Sigma_hat - K @ C @ Sigma_hat
+                print(f"Corrección: mu = {mu.flatten()} \nSigma = {Sigma}")
+                print(f"Ganancia de Kalman: K = {K.flatten()}")
             else:
                 mu = mu_hat
                 Sigma = Sigma_hat

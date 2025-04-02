@@ -1,0 +1,3 @@
+[console_scripts]
+joint_state_publisher = puzzlebot_sim.joint_state_publisher:main
+
