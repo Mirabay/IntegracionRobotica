@@ -46,11 +46,16 @@ def generate_launch_description():
         arguments=['-d', os.path.join(get_package_share_directory('puzzlebot_sim'), 'rviz', 'puzzlebot.rviz')],
         output='screen',
     )
-    
+    rqt_tf_tree_node = Node(
+        package='rqt_tf_tree',
+        executable='rqt_tf_tree',
+        name='rqt_tf_tree',
+        output='screen',
+    )
 
     l_d = LaunchDescription([rviz2_pub_node,
                              robot_state_pub_node,
-                            #  joint_state_pub_node,
-                             joint_state_publisher_node])
+                             joint_state_publisher_node,
+                             rqt_tf_tree_node])
 
     return l_d

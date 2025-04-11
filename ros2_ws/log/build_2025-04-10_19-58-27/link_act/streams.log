@@ -1,0 +1,22 @@
+[0.602s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/link_act': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/link_act/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/link_act build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/link_act/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/link_act/install.log --single-version-externally-managed install_data
+[0.739s] running egg_info
+[0.739s] writing ../../build/link_act/link_act.egg-info/PKG-INFO
+[0.739s] writing dependency_links to ../../build/link_act/link_act.egg-info/dependency_links.txt
+[0.740s] writing entry points to ../../build/link_act/link_act.egg-info/entry_points.txt
+[0.740s] writing requirements to ../../build/link_act/link_act.egg-info/requires.txt
+[0.740s] writing top-level names to ../../build/link_act/link_act.egg-info/top_level.txt
+[0.740s] reading manifest file '../../build/link_act/link_act.egg-info/SOURCES.txt'
+[0.740s] adding license file 'LICENSE'
+[0.741s] writing manifest file '../../build/link_act/link_act.egg-info/SOURCES.txt'
+[0.741s] running build
+[0.741s] running build_py
+[0.741s] running install
+[0.741s] running install_lib
+[0.742s] running install_data
+[0.742s] running install_egg_info
+[0.743s] removing '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages/link_act-0.0.0-py3.10.egg-info' (and everything under it)
+[0.743s] Copying ../../build/link_act/link_act.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages/link_act-0.0.0-py3.10.egg-info
+[0.744s] running install_scripts
+[0.755s] Installing puzzle_drone script to /home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/link_act
+[0.755s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/link_act/install.log'
+[0.775s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/link_act' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/link_act/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/link_act build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/link_act/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/link_act/install.log --single-version-externally-managed install_data

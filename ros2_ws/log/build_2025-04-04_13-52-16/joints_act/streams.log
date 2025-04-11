@@ -1,0 +1,23 @@
+[0.636s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/joints_act': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/joints_act/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/joints_act/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joints_act build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/joints_act/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/joints_act/install.log --single-version-externally-managed install_data
+[0.773s] running egg_info
+[0.773s] writing ../../build/joints_act/joints_act.egg-info/PKG-INFO
+[0.773s] writing dependency_links to ../../build/joints_act/joints_act.egg-info/dependency_links.txt
+[0.773s] writing entry points to ../../build/joints_act/joints_act.egg-info/entry_points.txt
+[0.773s] writing requirements to ../../build/joints_act/joints_act.egg-info/requires.txt
+[0.773s] writing top-level names to ../../build/joints_act/joints_act.egg-info/top_level.txt
+[0.774s] reading manifest file '../../build/joints_act/joints_act.egg-info/SOURCES.txt'
+[0.774s] adding license file 'LICENSE'
+[0.775s] writing manifest file '../../build/joints_act/joints_act.egg-info/SOURCES.txt'
+[0.775s] running build
+[0.775s] running build_py
+[0.775s] running install
+[0.775s] running install_lib
+[0.776s] running install_data
+[0.776s] copying urdf/continuos_ex.urdf -> /home/tony/IntegracionRobotica/ros2_ws/install/joints_act/share/joints_act/urdf
+[0.776s] running install_egg_info
+[0.777s] removing '/home/tony/IntegracionRobotica/ros2_ws/install/joints_act/lib/python3.10/site-packages/joints_act-0.0.0-py3.10.egg-info' (and everything under it)
+[0.777s] Copying ../../build/joints_act/joints_act.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/joints_act/lib/python3.10/site-packages/joints_act-0.0.0-py3.10.egg-info
+[0.778s] running install_scripts
+[0.791s] Installing joint_pub script to /home/tony/IntegracionRobotica/ros2_ws/install/joints_act/lib/joints_act
+[0.791s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/joints_act/install.log'
+[0.809s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/joints_act' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/joints_act/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/joints_act/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joints_act build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/joints_act/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/joints_act/install.log --single-version-externally-managed install_data

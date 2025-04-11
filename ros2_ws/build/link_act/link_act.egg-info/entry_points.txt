@@ -1,0 +1,3 @@
+[console_scripts]
+puzzle_drone = link_act.puzzle_drone:main
+
