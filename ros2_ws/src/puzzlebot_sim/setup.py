@@ -27,7 +27,11 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'joint_state_publisher = puzzlebot_sim.joint_state_publisher:main'
+            'joint_state_publisher = puzzlebot_sim.joint_state_publisher:main',
+            'puzzlebot_kinematic_model = puzzlebot_sim.kinematic_model_node:main',
+            'puzzlebot_sim = puzzlebot_sim.puzzlebot_sim:main',
+            'localisation = puzzlebot_sim.localisation:main',
+            'point_stabilisation = point_stabilisation_control:main',
         ],
     },
 )

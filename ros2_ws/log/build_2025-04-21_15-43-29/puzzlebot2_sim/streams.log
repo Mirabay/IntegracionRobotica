@@ -1,0 +1,45 @@
+[1.386s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot2_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log --single-version-externally-managed install_data
+[1.620s] running egg_info
+[1.620s] writing ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/PKG-INFO
+[1.620s] writing dependency_links to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/dependency_links.txt
+[1.620s] writing entry points to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/entry_points.txt
+[1.621s] writing requirements to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/requires.txt
+[1.621s] writing top-level names to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/top_level.txt
+[1.622s] reading manifest file '../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/SOURCES.txt'
+[1.622s] adding license file 'LICENSE'
+[1.623s] writing manifest file '../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/SOURCES.txt'
+[1.624s] running build
+[1.624s] running build_py
+[1.624s] running install
+[1.624s] running install_lib
+[1.626s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/puzzlebot_sim.py to puzzlebot_sim.cpython-310.pyc
+[1.626s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/point_stabilisation_control.py to point_stabilisation_control.cpython-310.pyc
+[1.626s] Sorry: IndentationError: expected an indented block after function definition on line 10 (puzzlebot_sim.py, line 14)
+[1.626s] Sorry: IndentationError: expected an indented block after function definition on line 10 (point_stabilisation_control.py, line 14)
+[1.626s] running install_data
+[1.626s] copying resource/puzzlebot2_sim -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/ament_index/resource_index/packages
+[1.626s] copying package.xml -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim
+[1.627s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/launch
+[1.627s] copying launch/puzzlebot_sim_launch.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/launch
+[1.627s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/config
+[1.627s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+[1.627s] copying rviz/simple_puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+[1.627s] copying rviz/multi_puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+[1.627s] copying rviz/puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+[1.627s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+[1.627s] copying meshes/MCR2_puzzlebot_base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+[1.627s] copying meshes/MCR2_puzzlebot_jetson_lidar_base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+[1.627s] copying meshes/MCR2_caster_wheel.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+[1.628s] copying meshes/MCR2_puzzlebot_jetson_base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+[1.628s] copying meshes/MCR2_wheel.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+[1.628s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/urdf
+[1.628s] copying urdf/puzzlebot.urdf -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/urdf
+[1.628s] running install_egg_info
+[1.630s] Copying ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim-0.0.0-py3.10.egg-info
+[1.630s] running install_scripts
+[1.651s] Installing joint_state_pub script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[1.652s] Installing localisation script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[1.652s] Installing point_stabilisation_control script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[1.652s] Installing puzzlebot_sim script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[1.652s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log'
+[1.678s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot2_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log --single-version-externally-managed install_data

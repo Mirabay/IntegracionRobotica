@@ -1,0 +1,28 @@
+[0.798s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot2_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log --single-version-externally-managed install_data
+[0.929s] running egg_info
+[0.930s] writing ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/PKG-INFO
+[0.930s] writing dependency_links to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/dependency_links.txt
+[0.930s] writing entry points to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/entry_points.txt
+[0.930s] writing requirements to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/requires.txt
+[0.930s] writing top-level names to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/top_level.txt
+[0.931s] reading manifest file '../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/SOURCES.txt'
+[0.931s] adding license file 'LICENSE'
+[0.932s] writing manifest file '../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/SOURCES.txt'
+[0.932s] running build
+[0.932s] running build_py
+[0.932s] copying puzzlebot2_sim/point_stabilisation_control.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+[0.933s] running install
+[0.933s] running install_lib
+[0.933s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim/point_stabilisation_control.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+[0.934s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/point_stabilisation_control.py to point_stabilisation_control.cpython-310.pyc
+[0.934s] running install_data
+[0.934s] running install_egg_info
+[0.935s] removing '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim-0.0.0-py3.10.egg-info' (and everything under it)
+[0.935s] Copying ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim-0.0.0-py3.10.egg-info
+[0.936s] running install_scripts
+[0.950s] Installing joint_state_pub script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[0.950s] Installing localisation script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[0.950s] Installing point_stabilisation_control script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[0.950s] Installing puzzlebot_sim script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+[0.950s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log'
+[0.967s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot2_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log --single-version-externally-managed install_data

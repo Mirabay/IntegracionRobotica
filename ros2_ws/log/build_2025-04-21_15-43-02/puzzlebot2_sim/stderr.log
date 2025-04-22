@@ -1,0 +1,3 @@
+Sorry: IndentationError: expected an indented block after function definition on line 10 (puzzlebot_sim.py, line 14)
+Sorry: IndentationError: expected an indented block after function definition on line 10 (point_stabilisation_control.py, line 14)
+error: can't copy 'resource/puzzlebot2_sim': doesn't exist or not a regular file
