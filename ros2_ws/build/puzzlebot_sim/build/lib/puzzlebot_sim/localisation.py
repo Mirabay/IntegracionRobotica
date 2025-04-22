@@ -36,8 +36,7 @@ class Localisation(Node):
         self.wl = 0.0 # left wheel speed [rad/s] 
         self.odom = Odometry() # ROS message to publish the robot's pose 
         self.prev_time = 0.0 # previous time [s]
-        # limitar el angulo a [-pi, pi]
-        self.theta = np.arctan2(np.sin(self.theta), np.cos(self.theta))
+
         
         self.prev_time = self.get_clock().now().nanoseconds # Get the current time [ns]
         self.get_logger().info("Localisation node started")
@@ -110,8 +109,11 @@ class Localisation(Node):
         self.x = self.x + v * np.cos(self.theta) * dt # Update x position [m]
         self.y = self.y + v * np.sin(self.theta) * dt
         self.theta = self.theta + w * dt
+        self.theta = np.arctan2(np.sin(self.theta), np.cos(self.theta)) # Limit the angle to [-pi, pi]
         self.prev_time = self.get_clock().now().nanoseconds # Update the previous time [s]
 
+        # Prints
+        print(f'Pose: x={self.x:.2f}, y={self.y:.2f}, theta={self.theta:.2f}')
      
 
     def fill_odom_message(self, x, y, yaw): 
@@ -126,16 +128,16 @@ class Localisation(Node):
         odom_msg.child_frame_id = 'base_link' # Set the child frame id 
         odom_msg.pose.pose.position.x = x # x position [m] 
         odom_msg.pose.pose.position.y = y # y position [m] 
-        odom_msg.pose.pose.position.z = 0.0 # z position [m]
+        odom_msg.pose.pose.position.z = 0.05 # z position [m]
          
         # Set the orientation using quaternion 
         # Convert the yaw angle to a quaternion 
 
         quat = transforms3d.euler.euler2quat(0, 0, yaw)  
-        odom_msg.pose.pose.orientation.x = quat[0] 
-        odom_msg.pose.pose.orientation.y = quat[1] 
-        odom_msg.pose.pose.orientation.z = quat[2] 
-        odom_msg.pose.pose.orientation.w = quat[3] 
+        odom_msg.pose.pose.orientation.w = quat[0] 
+        odom_msg.pose.pose.orientation.x = quat[1] 
+        odom_msg.pose.pose.orientation.y = quat[2] 
+        odom_msg.pose.pose.orientation.z = quat[3] 
         return odom_msg 
 
  

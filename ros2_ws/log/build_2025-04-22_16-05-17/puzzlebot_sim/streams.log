@@ -1,0 +1,30 @@
+[1.504s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data
+[1.743s] running egg_info
+[1.744s] writing ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/PKG-INFO
+[1.744s] writing dependency_links to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/dependency_links.txt
+[1.744s] writing entry points to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/entry_points.txt
+[1.745s] writing requirements to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/requires.txt
+[1.745s] writing top-level names to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/top_level.txt
+[1.746s] reading manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[1.747s] adding license file 'LICENSE'
+[1.747s] writing manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[1.747s] running build
+[1.747s] running build_py
+[1.748s] copying puzzlebot_sim/moveFoward.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[1.748s] running install
+[1.748s] running install_lib
+[1.749s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/moveFoward.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[1.750s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/moveFoward.py to moveFoward.cpython-310.pyc
+[1.750s] running install_data
+[1.751s] running install_egg_info
+[1.752s] removing '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim-0.0.0-py3.10.egg-info' (and everything under it)
+[1.753s] Copying ../../build/puzzlebot_sim/puzzlebot_sim.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim-0.0.0-py3.10.egg-info
+[1.754s] running install_scripts
+[1.775s] Installing joint_state_publisher script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[1.775s] Installing localisation script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[1.775s] Installing moveFoward script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[1.776s] Installing point_stabilisation script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[1.776s] Installing puzzlebot_kinematic_model script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[1.776s] Installing puzzlebot_sim script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[1.776s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log'
+[1.811s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data

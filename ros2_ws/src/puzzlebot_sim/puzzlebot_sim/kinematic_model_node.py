@@ -39,7 +39,6 @@ class KinematicModelNode(Node):
      
 
     def timer_callback(self): 
-        
         # Update the robot's pose based on the current velocities
         self.wr_msg.data, self.wl_msg.data = self.get_wheel_speeds(self.v, self.w)
         # Publish the wheel speeds

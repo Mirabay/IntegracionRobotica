@@ -17,6 +17,7 @@ puzzlebot_sim/__init__.py
 puzzlebot_sim/joint_state_publisher.py
 puzzlebot_sim/kinematic_model_node.py
 puzzlebot_sim/localisation.py
+puzzlebot_sim/moveFoward.py
 puzzlebot_sim/point_stabilisation_control.py
 puzzlebot_sim/puzzlebot_sim.py
 resource/puzzlebot_sim

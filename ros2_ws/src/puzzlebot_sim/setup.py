@@ -32,6 +32,7 @@ setup(
             'puzzlebot_sim = puzzlebot_sim.puzzlebot_sim:main',
             'localisation = puzzlebot_sim.localisation:main',
             'point_stabilisation = point_stabilisation_control:main',
+            'moveFoward = puzzlebot_sim.moveFoward:main',
         ],
     },
 )
