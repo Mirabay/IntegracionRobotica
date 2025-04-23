@@ -16,6 +16,8 @@ def generate_launch_description():
         print(robot_description)
     # Create the robot description parameter
     
+    
+    # Create the robot_state_publisher node
     robot_state_pub_node= Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -26,18 +28,27 @@ def generate_launch_description():
         arguments=[urdf],
         output='screen'
     )
-    joint_state_pub_node = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui',
-        name='joint_state_publisher_gui',
-        output='screen',
-    )
+
+    # Create the joint_state_publisher node
     joint_state_publisher_node = Node(
         package='puzzlebot_sim',
         executable='joint_state_publisher',
         name='joint_state_publisher',
         output='screen',
     )   
+    puzzlebot_sim = Node(
+        package='puzzlebot_sim',
+        executable='puzzlebot_sim',
+        name='puzzlebot_sim',
+        output='screen',
+    )
+    # Create the localization node
+    localisation_node = Node(
+        package='puzzlebot_sim',
+        executable='localisation',
+        name='localisation',
+        output='screen',
+    )
     
     rviz2_pub_node = Node(
         package='rviz2',
@@ -53,7 +64,11 @@ def generate_launch_description():
         output='screen',
     )
 
-    l_d = LaunchDescription([rviz2_pub_node,
+    l_d = LaunchDescription([
+                             puzzlebot_sim,
+                             localisation_node,
+                             
+                             rviz2_pub_node,
                              robot_state_pub_node,
                              joint_state_publisher_node,
                              rqt_tf_tree_node])

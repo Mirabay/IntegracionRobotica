@@ -1,105 +1,63 @@
 import rclpy
 from rclpy.node import Node
-from tf2_ros import TransformBroadcaster, StaticTransformBroadcaster
-from geometry_msgs.msg import TransformStamped
-import transforms3d
+from std_msgs.msg import Float32
+from geometry_msgs.msg import Twist
+from rclpy import qos
 import numpy as np
 
 class PuzzlebotSim(Node):
     def __init__(self):
         super().__init__('puzzlebot_sim')
         
-        # Inicializar broadcasters para TF estáticas y dinámicas
-        self.tf_static_broadcaster = StaticTransformBroadcaster(self)
-        self.tf_dynamic_broadcaster = TransformBroadcaster(self)
-        
-        # Variable para controlar la rotación de las ruedas
-        self.wheel_angle = 0.0
-        self.rotation_speed = 0.5  # radianes por segundo
-        self.base_footprint_angle = 0.0
-        # Publicar transformaciones estáticas al inicio
-        self.publish_static_transforms()
-        
-        # Timer para transformaciones dinámicas (10 Hz)
-        self.timer = self.create_timer(0.1, self.publish_dynamic_transforms)
+        # Create a subscriber to the /cmd_vel topic 
+        self.cmd_vel_subscriber = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) 
 
-    def publish_static_transforms(self):
-        # Transformaciones estáticas (solo se publican una vez)
-        static_transforms = [
-            self.create_transform(
-                parent_frame="map",
-                child_frame="odom",
-                x=0.5, y=0.0, z=0.0,
-                roll=0.0, pitch=0.0, yaw=0.0
-            ),
-            self.create_transform(
-                parent_frame="base_footprint",
-                child_frame="base_link",
-                x=0.0, y=0.0, z=0.05,
-                roll=0.0, pitch=0.0, yaw=0.0
-            ),
-            self.create_transform(
-                parent_frame="base_link",
-                child_frame="caster_link",
-                x=-.095, y=0.0, z=-0.03,
-                roll=0.0, pitch=0.0, yaw=0.0
-            )
-        ]
-        self.tf_static_broadcaster.sendTransform(static_transforms)
+        # Create a publisher for the right and left wheel velocities 
+        self.wr_pub = self.create_publisher(Float32,'wr',qos.qos_profile_sensor_data) 
+        self.wl_pub = self.create_publisher(Float32,'wl',qos.qos_profile_sensor_data) 
 
-    def publish_dynamic_transforms(self):
-        # Actualizar ángulo de las ruedas
-        self.wheel_angle += self.rotation_speed * 0.1  # delta_time = 0.1s (10Hz)
-        self.base_footprint_angle += self.rotation_speed * 0.5
-        # Transformaciones dinámicas (se actualizan periódicamente)
-        dynamic_transforms = [
-            self.create_transform(
-                parent_frame="odom",
-                child_frame="base_footprint",
-                x=0.5, y=0.0, z=0.0,
-                roll=0.0, pitch= 0.0, yaw=0.0,
-                is_dynamic=True
-            ),
-            self.create_transform(
-                parent_frame="base_link",
-                child_frame="wheel_left_link",
-                x=0.052, y=0.095, z=-0.0025,
-                roll=0.0, pitch=self.wheel_angle, yaw=0.0,
-                is_dynamic=True
-            ),
-            self.create_transform(
-                parent_frame="base_link",
-                child_frame="wheel_right_link",
-                x=0.052, y=-0.095, z=-0.0025,
-                roll=0.0, pitch=self.wheel_angle, yaw=0.0,
-                is_dynamic=True
-            )
-        ]
-        self.tf_dynamic_broadcaster.sendTransform(dynamic_transforms)
+        ############ ROBOT CONSTANTS ################  
+        self.r=0.05 #puzzlebot wheel radius [m] 
+        self.L = 0.19 #puzzlebot wheel separation [m] 
 
-    def create_transform(self, parent_frame, child_frame, 
-                        x, y, z, roll, pitch, yaw, 
-                        is_dynamic=False):
-        tf = TransformStamped()
+        ############ Variables ############### 
+        self.w = 0.0 # robot's angular speed [rad/s] 
+        self.v = 0.0 #robot's linear speed [m/s] 
+        self.wr_msg = Float32() #Ros message to publish the right wheel speed 
+        self.wl_msg = Float32() #Ros message to publish the left wheel speed 
+
+
+        timer_period = 0.02 # Desired time to update the robot's pose [s] 
+        # Create a timer to publish the wheel speeds 
+        self.timer = self.create_timer(timer_period, self.timer_callback) 
+
+        # WRITE YOUR CODE HERE 
+
+     
+
+    def timer_callback(self): 
+        # Update the robot's pose based on the current velocities
+        self.wr_msg.data, self.wl_msg.data = self.get_wheel_speeds(self.v, self.w)
+        # Publish the wheel speeds
+        self.wr_pub.publish(self.wr_msg)
+        self.wl_pub.publish(self.wl_msg)
+     
+
+    def cmd_vel_callback(self, msg): 
+
+        # Get the linear and angular velocities from the message 
+        self.v = msg.linear.x 
+        self.w = msg.angular.z 
+
+
+    def get_wheel_speeds(self, v, w): 
+        # Calculate the wheel speeds based on the linear and angular velocities 
+        wr = (2*v + w*self.L) / (2 * self.r)
+        wl = (2*v - w*self.L)/ (2 * self.r)
         
-        # Cabecera con timestamp (importante para TF dinámicas)
-        tf.header.stamp = self.get_clock().now().to_msg()
-        tf.header.frame_id = parent_frame
-        tf.child_frame_id = child_frame
-        
-        # Transformación de traslación
-        tf.transform.translation.x = x
-        tf.transform.translation.y = y
-        tf.transform.translation.z = z
-        
-        # Convertir ángulos Euler a cuaternión
-        q = transforms3d.euler.euler2quat(roll, pitch, yaw)
-        tf.transform.rotation.x = q[1]
-        tf.transform.rotation.y = q[2]
-        tf.transform.rotation.z = q[3]
-        tf.transform.rotation.w = q[0]
-        
-        return tf
+        print(f'wR:{wr} wL:{wl}')
+    
+        return wr, wl 
 
 def main():
     rclpy.init()
