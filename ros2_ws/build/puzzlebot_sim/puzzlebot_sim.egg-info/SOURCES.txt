@@ -18,8 +18,9 @@ puzzlebot_sim/joint_state_publisher.py
 puzzlebot_sim/kinematic_model_node.py
 puzzlebot_sim/localisation.py
 puzzlebot_sim/moveFoward.py
-puzzlebot_sim/point_stabilisation_control.py
+puzzlebot_sim/point_stabilisation_controller.py
 puzzlebot_sim/puzzlebot_sim.py
+puzzlebot_sim/shapeDrawer.py
 resource/puzzlebot_sim
 rviz/puzzlebot_rviz.rviz
 test/test_copyright.py

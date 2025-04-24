@@ -1,0 +1,35 @@
+running develop
+running egg_info
+creating link_act.egg-info
+writing link_act.egg-info/PKG-INFO
+writing dependency_links to link_act.egg-info/dependency_links.txt
+writing entry points to link_act.egg-info/entry_points.txt
+writing requirements to link_act.egg-info/requires.txt
+writing top-level names to link_act.egg-info/top_level.txt
+writing manifest file 'link_act.egg-info/SOURCES.txt'
+reading manifest file 'link_act.egg-info/SOURCES.txt'
+writing manifest file 'link_act.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages/link-act.egg-link (link to .)
+Installing puzzle_drone script to /home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/link_act
+
+Installed /home/tony/IntegracionRobotica/ros2_ws/build/link_act
+running symlink_data
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/ament_index
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/ament_index/resource_index
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/ament_index/resource_index/packages
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/resource/link_act -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/ament_index/resource_index/packages
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/package.xml -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/launch
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/launch/cylinder_launch.py -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/launch
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/launch/puzzledrone_launch.py -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/launch
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/config
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/rviz
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/rviz/puzzledrone.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/rviz
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/meshes
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/meshes/base_210mm.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/meshes
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/meshes/propeller_ccw_puller_5in.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/meshes
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/meshes/propeller_cw_puller_5in.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/meshes
+creating /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/urdf
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/urdf/cylinder.urdf -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/urdf
+symbolically linking /home/tony/IntegracionRobotica/ros2_ws/build/link_act/urdf/puzzle_drone.urdf -> /home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/urdf

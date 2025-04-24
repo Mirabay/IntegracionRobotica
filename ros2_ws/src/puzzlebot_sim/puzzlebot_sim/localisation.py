@@ -60,9 +60,6 @@ class Localisation(Node):
         # Publish odometry
         self.publish_odometry()
         
-        # Publish TF transform
-        self.publish_tf_transform()
-
     def wr_callback(self, msg):
         self.wr = msg.data
 
@@ -84,20 +81,11 @@ class Localisation(Node):
         
         # Update previous time
         self.prev_time = current_time
-
-        # Debug logging
-        self.get_logger().debug(
-            f"Pose: x={self.x:.3f}, y={self.y:.3f}, θ={np.degrees(self.theta):.1f}°",
-            throttle_duration_sec=1.0
-        )
-
+        
     def publish_odometry(self):
         # Create and fill odometry message
         odom_msg = Odometry()
         odom_msg.header.stamp = self.get_clock().now().to_msg()
-        odom_msg.header.frame_id = 'odom'
-        odom_msg.child_frame_id = 'base_link'
-        
         # Position
         odom_msg.pose.pose.position.x = self.x
         odom_msg.pose.pose.position.y = self.y
@@ -105,33 +93,15 @@ class Localisation(Node):
         
         # Orientation (quaternion)
         q = transforms3d.euler.euler2quat(0, 0, self.theta)
-        odom_msg.pose.pose.orientation.w = q[0]
         odom_msg.pose.pose.orientation.x = q[1]
         odom_msg.pose.pose.orientation.y = q[2]
         odom_msg.pose.pose.orientation.z = q[3]
+        odom_msg.pose.pose.orientation.w = q[0]
 
         self.odom_pub.publish(odom_msg)
 
-    def publish_tf_transform(self):
-        # Create and fill transform message
-        transform = TransformStamped()
-        transform.header.stamp = self.get_clock().now().to_msg()
-        transform.header.frame_id = 'odom'
-        transform.child_frame_id = 'base_link'
-        
-        # Translation
-        transform.transform.translation.x = self.x
-        transform.transform.translation.y = self.y
-        transform.transform.translation.z = 0.0  # Ground level
-        
-        # Rotation (same as odometry)
-        q = transforms3d.euler.euler2quat(0, 0, self.theta)
-        transform.transform.rotation.x = q[1]
-        transform.transform.rotation.y = q[2]
-        transform.transform.rotation.z = q[3]
-        transform.transform.rotation.w = q[0]
 
-        self.tf_broadcaster.sendTransform(transform)
+
 
 def main(args=None):
     rclpy.init(args=args)

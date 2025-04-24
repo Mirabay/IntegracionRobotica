@@ -1,0 +1,55 @@
+running develop
+Removing /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2-sim.egg-link (link to .)
+running egg_info
+writing ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/entry_points.txt
+writing requirements to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/requires.txt
+writing top-level names to ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/top_level.txt
+reading manifest file '../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build
+creating /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib
+creating /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+copying puzzlebot2_sim/localisation.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+copying puzzlebot2_sim/__init__.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+copying puzzlebot2_sim/puzzlebot_sim.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+copying puzzlebot2_sim/point_stabilisation_control.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+copying puzzlebot2_sim/joint_state_pub.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim
+running install
+running install_lib
+creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim/localisation.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim/__init__.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim/puzzlebot_sim.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim/point_stabilisation_control.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build/lib/puzzlebot2_sim/joint_state_pub.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim
+byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/localisation.py to localisation.cpython-310.pyc
+byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/puzzlebot_sim.py to puzzlebot_sim.cpython-310.pyc
+byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/point_stabilisation_control.py to point_stabilisation_control.cpython-310.pyc
+byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim/joint_state_pub.py to joint_state_pub.cpython-310.pyc
+running install_data
+copying resource/puzzlebot2_sim -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/ament_index/resource_index/packages
+copying package.xml -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim
+copying launch/puzzlebot_sim_launch.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/launch
+copying rviz/simple_puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+copying rviz/multi_puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+copying rviz/puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/rviz
+copying meshes/MCR2_puzzlebot_base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+copying meshes/MCR2_puzzlebot_jetson_lidar_base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+copying meshes/MCR2_caster_wheel.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+copying meshes/MCR2_puzzlebot_jetson_base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+copying meshes/MCR2_wheel.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/meshes
+copying urdf/puzzlebot.urdf -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/urdf
+running install_egg_info
+Copying ../../build/puzzlebot2_sim/puzzlebot2_sim.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages/puzzlebot2_sim-0.0.0-py3.10.egg-info
+running install_scripts
+Installing joint_state_pub script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+Installing localisation script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+Installing point_stabilisation_control script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+Installing puzzlebot_sim script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/puzzlebot_sim
+writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log'

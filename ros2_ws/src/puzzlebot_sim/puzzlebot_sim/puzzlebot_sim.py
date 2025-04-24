@@ -55,7 +55,7 @@ class PuzzlebotSim(Node):
         wr = (2*v + w*self.L) / (2 * self.r)
         wl = (2*v - w*self.L)/ (2 * self.r)
         
-        print(f'wR:{wr} wL:{wl}')
+        # print(f'wR:{wr} wL:{wl}')
     
         return wr, wl 
 

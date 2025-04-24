@@ -31,8 +31,9 @@ setup(
             'puzzlebot_kinematic_model = puzzlebot_sim.kinematic_model_node:main',
             'puzzlebot_sim = puzzlebot_sim.puzzlebot_sim:main',
             'localisation = puzzlebot_sim.localisation:main',
-            'point_stabilisation = point_stabilisation_control:main',
+            'point_stabilisation_controller = puzzlebot_sim.point_stabilisation_controller:main',
             'moveFoward = puzzlebot_sim.moveFoward:main',
+            'shapeDrawer = puzzlebot_sim.shapeDrawer:main',
         ],
     },
 )

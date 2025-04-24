@@ -1,3 +1,0 @@
-[console_scripts]
-joint_pub = joints_act.joint_pub:main
-

@@ -2,7 +2,8 @@
 joint_state_publisher = puzzlebot_sim.joint_state_publisher:main
 localisation = puzzlebot_sim.localisation:main
 moveFoward = puzzlebot_sim.moveFoward:main
-point_stabilisation = point_stabilisation_control:main
+point_stabilisation_controller = puzzlebot_sim.point_stabilisation_controller:main
 puzzlebot_kinematic_model = puzzlebot_sim.kinematic_model_node:main
 puzzlebot_sim = puzzlebot_sim.puzzlebot_sim:main
+shapeDrawer = puzzlebot_sim.shapeDrawer:main
 

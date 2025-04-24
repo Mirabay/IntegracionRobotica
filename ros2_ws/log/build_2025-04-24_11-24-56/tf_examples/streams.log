@@ -1,0 +1,22 @@
+[1.464s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_examples build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/install.log --single-version-externally-managed install_data
+[1.692s] running egg_info
+[1.692s] writing ../../build/tf_examples/tf_examples.egg-info/PKG-INFO
+[1.692s] writing dependency_links to ../../build/tf_examples/tf_examples.egg-info/dependency_links.txt
+[1.693s] writing entry points to ../../build/tf_examples/tf_examples.egg-info/entry_points.txt
+[1.693s] writing requirements to ../../build/tf_examples/tf_examples.egg-info/requires.txt
+[1.693s] writing top-level names to ../../build/tf_examples/tf_examples.egg-info/top_level.txt
+[1.694s] reading manifest file '../../build/tf_examples/tf_examples.egg-info/SOURCES.txt'
+[1.694s] adding license file 'LICENSE'
+[1.695s] writing manifest file '../../build/tf_examples/tf_examples.egg-info/SOURCES.txt'
+[1.695s] running build
+[1.695s] running build_py
+[1.696s] running install
+[1.696s] running install_lib
+[1.697s] running install_data
+[1.697s] running install_egg_info
+[1.699s] removing '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages/tf_examples-0.0.0-py3.10.egg-info' (and everything under it)
+[1.699s] Copying ../../build/tf_examples/tf_examples.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages/tf_examples-0.0.0-py3.10.egg-info
+[1.700s] running install_scripts
+[1.720s] Installing static_tf script to /home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/tf_examples
+[1.720s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/install.log'
+[1.747s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_examples build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/install.log --single-version-externally-managed install_data

@@ -30,9 +30,6 @@
     </visual>
   </link>
 
-  <link name="case_link">
-    <!-- Add case STL here if available -->
-  </link>
 
   <!-- New caster wheel link -->
   <link name="caster_wheel_link">
@@ -64,11 +61,6 @@
     <axis xyz="0 1 0"/>
   </joint>
 
-  <joint name="case_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="case_link"/>
-    <origin xyz="-0.095 0 -0.03" rpy="0 0 0"/>
-  </joint>
 
   <!-- Caster wheel joint -->
   <joint name="caster_wheel_joint" type="fixed">

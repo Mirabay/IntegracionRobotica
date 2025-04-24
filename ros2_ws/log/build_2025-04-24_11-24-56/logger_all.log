@@ -1,0 +1,277 @@
+[0.108s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.108s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=22, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x78023795fdc0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78023795f7f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78023795f7f0>>, mixin_verb=('build',))
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.269s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/tony/IntegracionRobotica/ros2_ws'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/link_act) by extension 'ros'
+[0.286s] DEBUG:colcon.colcon_core.package_identification:Package 'src/link_act' with type 'ros.ament_python' and name 'link_act'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot2_sim) by extension 'ros'
+[0.288s] DEBUG:colcon.colcon_core.package_identification:Package 'src/puzzlebot2_sim' with type 'ros.ament_python' and name 'puzzlebot2_sim'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/puzzlebot_sim) by extension 'ros'
+[0.289s] DEBUG:colcon.colcon_core.package_identification:Package 'src/puzzlebot_sim' with type 'ros.ament_python' and name 'puzzlebot_sim'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/tf_examples) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tf_examples' with type 'ros.ament_python' and name 'tf_examples'
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.291s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.321s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/tony/IntegracionRobotica/ros2_ws/install
+[0.322s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 442 installed packages in /opt/ros/humble
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'link_act' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'link_act' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tony/IntegracionRobotica/ros2_ws/build/link_act', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tony/IntegracionRobotica/ros2_ws/install/link_act', 'merge_install': False, 'path': '/home/tony/IntegracionRobotica/ros2_ws/src/link_act', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot2_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'puzzlebot2_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim', 'merge_install': False, 'path': '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'puzzlebot_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'puzzlebot_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim', 'merge_install': False, 'path': '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim', 'symlink_install': False, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'tf_examples' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'tf_examples' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tony/IntegracionRobotica/ros2_ws/build/tf_examples', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples', 'merge_install': False, 'path': '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples', 'symlink_install': False, 'test_result_base': None}
+[0.376s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.377s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.378s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tony/IntegracionRobotica/ros2_ws/src/link_act' with build type 'ament_python'
+[0.378s] Level 1:colcon.colcon_core.shell:create_environment_hook('link_act', 'ament_prefix_path')
+[0.380s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/hook/ament_prefix_path.ps1'
+[0.382s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/hook/ament_prefix_path.dsv'
+[0.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/hook/ament_prefix_path.sh'
+[0.383s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.383s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.387s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim' with build type 'ament_python'
+[0.388s] Level 1:colcon.colcon_core.shell:create_environment_hook('puzzlebot2_sim', 'ament_prefix_path')
+[0.388s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/hook/ament_prefix_path.ps1'
+[0.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/hook/ament_prefix_path.dsv'
+[0.389s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/hook/ament_prefix_path.sh'
+[0.389s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.389s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.393s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim' with build type 'ament_python'
+[0.394s] Level 1:colcon.colcon_core.shell:create_environment_hook('puzzlebot_sim', 'ament_prefix_path')
+[0.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/hook/ament_prefix_path.ps1'
+[0.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/hook/ament_prefix_path.dsv'
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/hook/ament_prefix_path.sh'
+[0.395s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.399s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples' with build type 'ament_python'
+[0.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_examples', 'ament_prefix_path')
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/hook/ament_prefix_path.ps1'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/hook/ament_prefix_path.dsv'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/hook/ament_prefix_path.sh'
+[0.401s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.401s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.683s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tony/IntegracionRobotica/ros2_ws/src/link_act'
+[0.683s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.683s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.940s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim'
+[0.941s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.941s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.228s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim'
+[1.229s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.229s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.491s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples'
+[1.491s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.491s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.849s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/link_act': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/link_act/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/link_act build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/link_act/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/link_act/install.log --single-version-externally-managed install_data
+[1.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot2_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log --single-version-externally-managed install_data
+[1.864s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_examples build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/install.log --single-version-externally-managed install_data
+[1.873s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data
+[2.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/link_act' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/link_act/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/link_act build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/link_act/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/link_act/install.log --single-version-externally-managed install_data
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act' for CMake module files
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act' for CMake config files
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/bin'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/pkgconfig/link_act.pc'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/lib/python3.10/site-packages'
+[2.138s] Level 1:colcon.colcon_core.shell:create_environment_hook('link_act', 'pythonpath')
+[2.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/hook/pythonpath.ps1'
+[2.139s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/hook/pythonpath.dsv'
+[2.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/hook/pythonpath.sh'
+[2.140s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/bin'
+[2.140s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(link_act)
+[2.140s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/package.ps1'
+[2.141s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/package.dsv'
+[2.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/package.sh'
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/package.bash'
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/link_act/package.zsh'
+[2.144s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tony/IntegracionRobotica/ros2_ws/install/link_act/share/colcon-core/packages/link_act)
+[2.146s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples' for CMake module files
+[2.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/tf_examples' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_examples build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/tf_examples/install.log --single-version-externally-managed install_data
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples' for CMake config files
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib'
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/bin'
+[2.148s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/pkgconfig/tf_examples.pc'
+[2.148s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/lib/python3.10/site-packages'
+[2.148s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_examples', 'pythonpath')
+[2.148s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/hook/pythonpath.ps1'
+[2.149s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/hook/pythonpath.dsv'
+[2.149s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/hook/pythonpath.sh'
+[2.150s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/bin'
+[2.150s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tf_examples)
+[2.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/package.ps1'
+[2.151s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/package.dsv'
+[2.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/package.sh'
+[2.152s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/package.bash'
+[2.152s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/tf_examples/package.zsh'
+[2.154s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tony/IntegracionRobotica/ros2_ws/install/tf_examples/share/colcon-core/packages/tf_examples)
+[2.155s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim' for CMake module files
+[2.156s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot2_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot2_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot2_sim/install.log --single-version-externally-managed install_data
+[2.156s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim' for CMake config files
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib'
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/bin'
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/pkgconfig/puzzlebot2_sim.pc'
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/lib/python3.10/site-packages'
+[2.157s] Level 1:colcon.colcon_core.shell:create_environment_hook('puzzlebot2_sim', 'pythonpath')
+[2.157s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/hook/pythonpath.ps1'
+[2.158s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/hook/pythonpath.dsv'
+[2.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/hook/pythonpath.sh'
+[2.159s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/bin'
+[2.159s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(puzzlebot2_sim)
+[2.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/package.ps1'
+[2.160s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/package.dsv'
+[2.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/package.sh'
+[2.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/package.bash'
+[2.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/puzzlebot2_sim/package.zsh'
+[2.162s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot2_sim/share/colcon-core/packages/puzzlebot2_sim)
+[2.177s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim' for CMake module files
+[2.177s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data
+[2.178s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim' for CMake config files
+[2.178s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib'
+[2.178s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/bin'
+[2.178s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/pkgconfig/puzzlebot_sim.pc'
+[2.179s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages'
+[2.179s] Level 1:colcon.colcon_core.shell:create_environment_hook('puzzlebot_sim', 'pythonpath')
+[2.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/hook/pythonpath.ps1'
+[2.179s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/hook/pythonpath.dsv'
+[2.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/hook/pythonpath.sh'
+[2.180s] Level 1:colcon.colcon_core.environment:checking '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/bin'
+[2.180s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(puzzlebot_sim)
+[2.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/package.ps1'
+[2.181s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/package.dsv'
+[2.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/package.sh'
+[2.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/package.bash'
+[2.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/package.zsh'
+[2.183s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/colcon-core/packages/puzzlebot_sim)
+[2.183s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.183s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.184s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.184s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.189s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.189s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.189s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.203s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.203s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tony/IntegracionRobotica/ros2_ws/install/local_setup.ps1'
+[2.204s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tony/IntegracionRobotica/ros2_ws/install/_local_setup_util_ps1.py'
+[2.206s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tony/IntegracionRobotica/ros2_ws/install/setup.ps1'
+[2.207s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tony/IntegracionRobotica/ros2_ws/install/local_setup.sh'
+[2.207s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tony/IntegracionRobotica/ros2_ws/install/_local_setup_util_sh.py'
+[2.208s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tony/IntegracionRobotica/ros2_ws/install/setup.sh'
+[2.209s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tony/IntegracionRobotica/ros2_ws/install/local_setup.bash'
+[2.209s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tony/IntegracionRobotica/ros2_ws/install/setup.bash'
+[2.210s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tony/IntegracionRobotica/ros2_ws/install/local_setup.zsh'
+[2.211s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tony/IntegracionRobotica/ros2_ws/install/setup.zsh'

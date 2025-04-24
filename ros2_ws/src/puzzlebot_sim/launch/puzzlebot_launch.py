@@ -2,8 +2,11 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch.actions import SetEnvironmentVariable
 
 def generate_launch_description():
+    
+    
     # Get the path to the package directory
     urdf_file_name = 'puzzlebot.urdf'
     urdf = os.path.join(
@@ -14,9 +17,7 @@ def generate_launch_description():
     with open(urdf, 'r') as infp:
         robot_description = infp.read()
         print(robot_description)
-    # Create the robot description parameter
-    
-    
+
     # Create the robot_state_publisher node
     robot_state_pub_node= Node(
         package='robot_state_publisher',
@@ -42,6 +43,12 @@ def generate_launch_description():
         name='puzzlebot_sim',
         output='screen',
     )
+    point_stabilisation_node = Node(
+        package='puzzlebot_sim',
+        executable='point_stabilisation_controller',
+        name='point_stabilisation_controller',
+        output='screen',
+    )
     # Create the localization node
     localisation_node = Node(
         package='puzzlebot_sim',
@@ -63,14 +70,40 @@ def generate_launch_description():
         name='rqt_tf_tree',
         output='screen',
     )
+    
+    shape_drawer = Node(
+        package='puzzlebot_sim',
+        executable='shapeDrawer',
+        name='shape_drawer',
+        parameters=[
+            {'shape': 'square'},
+            {'size': 1.0}
+        ]
+    )
 
     l_d = LaunchDescription([
+                            # para que no haya problema conectado a internet
+                            SetEnvironmentVariable('ROS_LOCALHOST_ONLY', '1'),
+                            SetEnvironmentVariable('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'),
+                            SetEnvironmentVariable('CYCLONEDDS_URI', 'file:///dev/null'),
+                            
+                            # Modelo Matematico y Odometria
                              puzzlebot_sim,
                              localisation_node,
                              
-                             rviz2_pub_node,
+                             # Simulacion
                              robot_state_pub_node,
                              joint_state_publisher_node,
-                             rqt_tf_tree_node])
+                             rviz2_pub_node,
+                             
+                             # Debug
+                            #  rqt_tf_tree_node,
+                            
+                            # Control y Rutinas de movimiento
+                             point_stabilisation_node,
+                             shape_drawer
+                             ])
 
     return l_d
+
+# puzzlebot_sim puzzlebot_launch.py shape:='triangle' size:='.2'
