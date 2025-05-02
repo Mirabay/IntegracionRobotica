@@ -7,7 +7,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://puzzlebot_sim/meshes/Puzzlebot_Jetson_Lidar_Edition_Base.stl"/>
+        <mesh filename="package://puzzlebot_sim/meshes/Puzzlebot_Jetson_Lidar_Edition_Base.stl"/> 
       </geometry>
     </visual>
   </link>

@@ -1,0 +1,68 @@
+[0.381s] Invoking command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data
+[0.513s] running egg_info
+[0.513s] creating ../../build/puzzlebot_sim/puzzlebot_sim.egg-info
+[0.513s] writing ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/PKG-INFO
+[0.513s] writing dependency_links to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/dependency_links.txt
+[0.513s] writing entry points to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/entry_points.txt
+[0.513s] writing requirements to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/requires.txt
+[0.513s] writing top-level names to ../../build/puzzlebot_sim/puzzlebot_sim.egg-info/top_level.txt
+[0.513s] writing manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[0.514s] reading manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[0.514s] adding license file 'LICENSE'
+[0.515s] writing manifest file '../../build/puzzlebot_sim/puzzlebot_sim.egg-info/SOURCES.txt'
+[0.515s] running build
+[0.515s] running build_py
+[0.515s] creating /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build
+[0.515s] creating /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib
+[0.515s] creating /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] copying puzzlebot_sim/shapeDrawer.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] copying puzzlebot_sim/localisation.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] copying puzzlebot_sim/joint_state_publisher.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] copying puzzlebot_sim/__init__.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] copying puzzlebot_sim/puzzlebot_sim.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] copying puzzlebot_sim/point_stabilisation_controller.py -> /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim
+[0.515s] running install
+[0.515s] running install_lib
+[0.516s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/shapeDrawer.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/localisation.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/joint_state_publisher.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/__init__.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/puzzlebot_sim.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] copying /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build/lib/puzzlebot_sim/point_stabilisation_controller.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim
+[0.516s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/shapeDrawer.py to shapeDrawer.cpython-310.pyc
+[0.517s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/localisation.py to localisation.cpython-310.pyc
+[0.517s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/joint_state_publisher.py to joint_state_publisher.cpython-310.pyc
+[0.518s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/__init__.py to __init__.cpython-310.pyc
+[0.518s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/puzzlebot_sim.py to puzzlebot_sim.cpython-310.pyc
+[0.518s] byte-compiling /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim/point_stabilisation_controller.py to point_stabilisation_controller.cpython-310.pyc
+[0.519s] running install_data
+[0.519s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/ament_index
+[0.519s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/ament_index/resource_index
+[0.519s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/ament_index/resource_index/packages
+[0.519s] copying resource/puzzlebot_sim -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/ament_index/resource_index/packages
+[0.519s] copying package.xml -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim
+[0.519s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/launch
+[0.519s] copying launch/puzzlebot_launch.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/launch
+[0.519s] copying launch/puzzlebot_multi_launch.py -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/launch
+[0.519s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/config
+[0.519s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/rviz
+[0.519s] copying rviz/puzzlebot_rviz.rviz -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/rviz
+[0.520s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/meshes
+[0.520s] copying meshes/Puzzlebot_Wheel.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/meshes
+[0.520s] copying meshes/Puzzlebot_Jetson_Lidar_Edition_Base.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/meshes
+[0.521s] copying meshes/Puzzlebot_Caster_Wheel.stl -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/meshes
+[0.521s] creating /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/urdf
+[0.521s] copying urdf/puzzlebot.urdf -> /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/share/puzzlebot_sim/urdf
+[0.521s] running install_egg_info
+[0.522s] Copying ../../build/puzzlebot_sim/puzzlebot_sim.egg-info to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages/puzzlebot_sim-0.0.0-py3.10.egg-info
+[0.522s] running install_scripts
+[0.534s] Installing joint_state_publisher script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] Installing localisation script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] Installing moveFoward script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] Installing point_stabilisation_controller script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] Installing puzzlebot_kinematic_model script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] Installing puzzlebot_sim script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] Installing shapeDrawer script to /home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/puzzlebot_sim
+[0.534s] writing list of installed files to '/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log'
+[0.550s] Invoked command in '/home/tony/IntegracionRobotica/ros2_ws/src/puzzlebot_sim' returned '0': PYTHONPATH=/home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tony/IntegracionRobotica/ros2_ws/install/puzzlebot_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/puzzlebot_sim build --build-base /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/build install --record /home/tony/IntegracionRobotica/ros2_ws/build/puzzlebot_sim/install.log --single-version-externally-managed install_data

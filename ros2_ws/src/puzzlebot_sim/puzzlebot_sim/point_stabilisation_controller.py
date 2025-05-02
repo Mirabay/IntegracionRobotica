@@ -11,8 +11,8 @@ class point_stabilisation_controller(Node):
         super().__init__('point_stabilisation_controller')
         
         # Parámetros del controlador
-        self.kp_linear = 0.25
-        self.kp_angular = 0.75
+        self.kp_linear = 1.0
+        self.kp_angular = 0.2
         self.max_linear_speed = 5.0
         self.max_angular_speed = 3.0
         self.goal_tolerance = 0.01

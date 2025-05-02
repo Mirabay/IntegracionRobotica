@@ -63,6 +63,7 @@ def generate_launch_description():
         name='rviz2',
         arguments=['-d', os.path.join(get_package_share_directory('puzzlebot_sim'), 'rviz', 'puzzlebot.rviz')],
         output='screen',
+        
     )
     rqt_tf_tree_node = Node(
         package='rqt_tf_tree',
@@ -80,10 +81,37 @@ def generate_launch_description():
             {'size': 1.0}
         ]
     )
+    
+    # Teleop keyboard
+    teleop_keyboard_node = Node(
+        package='teleop_twist_keyboard',
+        executable='teleop_twist_keyboard',
+        name='teleop_twist_keyboard',
+        output='screen',
+        parameters=[{
+            'use_sim_time': True
+        }],
+        remappings=[
+            ('cmd_vel', '/puzzlebot/cmd_vel')
+        ]
+    )
+    
+    rqt_graph_node = Node(  
+        package='rqt_graph',
+        executable='rqt_graph',
+        name='rqt_graph',
+        output='screen',
+        parameters=[{
+            'use_sim_time': True
+        }],
+        remappings=[
+            ('cmd_vel', '/puzzlebot/cmd_vel')
+        ]
+    )
 
     l_d = LaunchDescription([
                             # para que no haya problema conectado a internet
-                            SetEnvironmentVariable('ROS_LOCALHOST_ONLY', '1'),
+                            # SetEnvironmentVariable('ROS_LOCALHOST_ONLY', '1'),
                             SetEnvironmentVariable('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'),
                             SetEnvironmentVariable('CYCLONEDDS_URI', 'file:///dev/null'),
                             
@@ -97,11 +125,13 @@ def generate_launch_description():
                              rviz2_pub_node,
                              
                              # Debug
-                            #  rqt_tf_tree_node,
+                             rqt_tf_tree_node,
+                             rqt_graph_node,
                             
                             # Control y Rutinas de movimiento
                              point_stabilisation_node,
-                             shape_drawer
+                             shape_drawer,
+                            # teleop_keyboard_node
                              ])
 
     return l_d
