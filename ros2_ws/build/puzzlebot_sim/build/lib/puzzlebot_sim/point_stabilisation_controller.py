@@ -12,11 +12,11 @@ class point_stabilisation_controller(Node):
         
         # Parámetros del controlador
         self.kp_linear = 0.25
-        self.kp_angular = 0.5
-        self.max_linear_speed = 10.0
-        self.max_angular_speed = 1.0
+        self.kp_angular = 0.75
+        self.max_linear_speed = 5.0
+        self.max_angular_speed = 3.0
         self.goal_tolerance = 0.01
-        self.angular_tolerance = math.radians(0.5)  # 5 grados en radianes
+        self.angular_tolerance = math.radians(.1)  # 5 grados en radianes
         
         # Estado del robot
         self.current_pose = Point()
