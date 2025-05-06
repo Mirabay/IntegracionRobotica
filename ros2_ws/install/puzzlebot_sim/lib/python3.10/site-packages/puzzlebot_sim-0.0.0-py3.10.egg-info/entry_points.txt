@@ -1,4 +1,5 @@
 [console_scripts]
+curvy_controller = puzzlebot_sim.curvy_controller:main
 joint_state_publisher = puzzlebot_sim.joint_state_publisher:main
 localisation = puzzlebot_sim.localisation:main
 moveFoward = puzzlebot_sim.moveFoward:main

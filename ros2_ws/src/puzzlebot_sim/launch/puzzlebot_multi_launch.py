@@ -7,8 +7,9 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     robots = [
-        {'name': 'robot1', 'x_pose': 0.5, 'y_pose': 0.5},
-        {'name': 'robot2', 'x_pose': -0.5, 'y_pose': 0.5},
+        {'name': 'robot1', 'x_pose': 0.5, 'y_pose': 0.5, 'color': 'red'},
+        {'name': 'robot2', 'x_pose': -0.5, 'y_pose': 0.5, 'color': 'blue'},
+       
     ]
 
     # Configuración común
@@ -83,6 +84,14 @@ def generate_launch_description():
                 name='point_stabilisation_controller',
                 output='screen',
             ),
+            # # Controlador de movimiento curvilíneo (por robot)
+            # Node(
+            #     package='puzzlebot_sim',
+            #     executable='curvy_controller',
+            #     namespace=robot['name'],
+            #     name='curvy_controller',
+            #     output='screen',
+            # ),
             
             # Shape Node
             Node(

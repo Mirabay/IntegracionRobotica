@@ -15,6 +15,7 @@ meshes/Puzzlebot_Caster_Wheel.stl
 meshes/Puzzlebot_Jetson_Lidar_Edition_Base.stl
 meshes/Puzzlebot_Wheel.stl
 puzzlebot_sim/__init__.py
+puzzlebot_sim/curvy_controller.py
 puzzlebot_sim/joint_state_publisher.py
 puzzlebot_sim/localisation.py
 puzzlebot_sim/point_stabilisation_controller.py

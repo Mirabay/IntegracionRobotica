@@ -30,6 +30,8 @@ class Localisation(Node):
         # Create publishers
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
         self.tf_broadcaster = TransformBroadcaster(self)  # TF Broadcaster
+        self.wr_pub = self.create_publisher(Float32, 'wr_loc', qos.qos_profile_sensor_data)
+        self.wl_pub = self.create_publisher(Float32, 'wl_loc', qos.qos_profile_sensor_data)
 
         # Robot constants
         self.r = 0.05    # Wheel radius [m]
@@ -47,7 +49,7 @@ class Localisation(Node):
         self.get_logger().info("Localisation node started")
 
         # Main timer
-        self.create_timer(0.02, self.timer_callback)
+        self.create_timer(0.002, self.timer_callback)
 
     def timer_callback(self):
         # Calculate velocities
@@ -59,6 +61,7 @@ class Localisation(Node):
         
         # Publish odometry
         self.publish_odometry()
+        self.publish_wheels()
         
     def wr_callback(self, msg):
         self.wr = msg.data
@@ -99,6 +102,10 @@ class Localisation(Node):
         odom_msg.pose.pose.orientation.w = q[0]
 
         self.odom_pub.publish(odom_msg)
+    def publish_wheels(self):
+        # Publish wheel speeds
+        self.wr_pub.publish(Float32(data=self.wr))
+        self.wl_pub.publish(Float32(data=self.wl))
 
 
 

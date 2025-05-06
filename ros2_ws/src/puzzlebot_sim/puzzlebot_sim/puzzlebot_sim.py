@@ -27,7 +27,7 @@ class PuzzlebotSim(Node):
         self.wl_msg = Float32() #Ros message to publish the left wheel speed 
 
 
-        timer_period = 0.02 # Desired time to update the robot's pose [s] 
+        timer_period = 0.002 # Desired time to update the robot's pose [s] 
         # Create a timer to publish the wheel speeds 
         self.timer = self.create_timer(timer_period, self.timer_callback) 
 

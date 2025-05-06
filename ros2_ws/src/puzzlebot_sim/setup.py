@@ -34,6 +34,7 @@ setup(
             'point_stabilisation_controller = puzzlebot_sim.point_stabilisation_controller:main',
             'moveFoward = puzzlebot_sim.moveFoward:main',
             'shapeDrawer = puzzlebot_sim.shapeDrawer:main',
+            'curvy_controller = puzzlebot_sim.curvy_controller:main',
         ],
     },
 )

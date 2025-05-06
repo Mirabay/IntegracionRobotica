@@ -11,12 +11,12 @@ class point_stabilisation_controller(Node):
         super().__init__('point_stabilisation_controller')
         
         # Parámetros del controlador
-        self.kp_linear = 1.0
+        self.kp_linear = 0.5
         self.kp_angular = 0.2
         self.max_linear_speed = 5.0
         self.max_angular_speed = 3.0
-        self.goal_tolerance = 0.01
-        self.angular_tolerance = math.radians(.1)  # 5 grados en radianes
+        self.goal_tolerance = 0.1
+        self.angular_tolerance = math.radians(5)  # 5 grados en radianes
         
         # Estado del robot
         self.current_pose = Point()
@@ -43,7 +43,7 @@ class point_stabilisation_controller(Node):
         self.goal_reached_pub = self.create_publisher(Bool, 'goal_reached', 10)
         
         # Timer de control
-        self.control_timer = self.create_timer(0.02, self.control_loop)
+        self.control_timer = self.create_timer(0.002, self.control_loop)
         
         self.get_logger().info("Control de navegación listo")
 

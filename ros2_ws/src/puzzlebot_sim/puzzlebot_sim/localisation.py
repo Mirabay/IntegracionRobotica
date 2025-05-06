@@ -15,21 +15,15 @@ class Localisation(Node):
 
         # Create subscribers
         self.wr_sub = self.create_subscription(
-            Float32, 
-            'wr', 
-            self.wr_callback, 
-            qos.qos_profile_sensor_data
-        )
+            Float32, 'wr', self.wr_callback, qos.qos_profile_sensor_data)
         self.wl_sub = self.create_subscription(
-            Float32, 
-            'wl', 
-            self.wl_callback, 
-            qos.qos_profile_sensor_data
-        )
+            Float32, 'wl', self.wl_callback, qos.qos_profile_sensor_data)
 
         # Create publishers
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
-        self.tf_broadcaster = TransformBroadcaster(self)  # TF Broadcaster
+        self.tf_broadcaster = TransformBroadcaster(self)
+        self.wr_pub = self.create_publisher(Float32, 'wr_loc', qos.qos_profile_sensor_data)
+        self.wl_pub = self.create_publisher(Float32, 'wl_loc', qos.qos_profile_sensor_data)
 
         # Robot constants
         self.r = 0.05    # Wheel radius [m]
@@ -42,24 +36,54 @@ class Localisation(Node):
         self.wr = 0.0    # Right wheel speed [rad/s]
         self.wl = 0.0    # Left wheel speed [rad/s]
         
+        # Covariance parameters (NEW)
+        self.P = np.diag([0.0, 0.0, 0.0])  # 3x3 covariance matrix
+        self.sigma_v = 0.1   # Linear velocity noise (adjust)
+        self.sigma_w = 0.05  # Angular velocity noise (adjust)
+        
         # Timing control
         self.prev_time = self.get_clock().now().nanoseconds
         self.get_logger().info("Localisation node started")
 
-        # Main timer
-        self.create_timer(0.02, self.timer_callback)
+        self.create_timer(0.002, self.timer_callback)
 
     def timer_callback(self):
         # Calculate velocities
         v = self.r * (self.wr + self.wl) / 2.0
         w = self.r * (self.wr - self.wl) / self.L
         
-        # Update pose
+        # Update pose and covariance (UPDATED)
         self.update_pose(v, w)
+        self.update_covariance(v, w)  # NEW METHOD
         
         # Publish odometry
         self.publish_odometry()
+        self.publish_wheels()
+
+    # NEW METHOD: Covariance propagation
+    def update_covariance(self, v, w):
+        current_time = self.get_clock().now().nanoseconds
+        dt = (current_time - self.prev_time) * 1e-9
         
+        # Jacobian matrices
+        J_x = np.array([
+            [1, 0, -v * dt * np.sin(self.theta)],
+            [0, 1, v * dt * np.cos(self.theta)],
+            [0, 0, 1]
+        ])
+        
+        J_u = np.array([
+            [dt * np.cos(self.theta), -0.5 * v * dt**2 * np.sin(self.theta)],
+            [dt * np.sin(self.theta), 0.5 * v * dt**2 * np.cos(self.theta)],
+            [0, dt]
+        ])
+        
+        # Process noise covariance
+        Q = np.diag([self.sigma_v**2, self.sigma_w**2])
+        
+        # Covariance propagation
+        self.P = J_x @ self.P @ J_x.T + J_u @ Q @ J_u.T
+
     def wr_callback(self, msg):
         self.wr = msg.data
 
@@ -67,41 +91,53 @@ class Localisation(Node):
         self.wl = msg.data
 
     def update_pose(self, v, w):
-        # Get current time and calculate dt
         current_time = self.get_clock().now().nanoseconds
-        dt = (current_time - self.prev_time) * 1e-9  # Convert to seconds
+        dt = (current_time - self.prev_time) * 1e-9
         
         # Update position and orientation
         self.x += v * np.cos(self.theta) * dt
         self.y += v * np.sin(self.theta) * dt
         self.theta += w * dt
         
-        # Normalize angle between [-pi, pi]
+        # Normalize angle
         self.theta = np.arctan2(np.sin(self.theta), np.cos(self.theta))
-        
-        # Update previous time
         self.prev_time = current_time
         
     def publish_odometry(self):
-        # Create and fill odometry message
         odom_msg = Odometry()
         odom_msg.header.stamp = self.get_clock().now().to_msg()
+        odom_msg.header.frame_id = "odom"
+        odom_msg.child_frame_id = "base_link"
+        
         # Position
         odom_msg.pose.pose.position.x = self.x
         odom_msg.pose.pose.position.y = self.y
-        odom_msg.pose.pose.position.z = 0.05  # Wheel radius height
+        odom_msg.pose.pose.position.z = 0.05
         
-        # Orientation (quaternion)
+        # Orientation
         q = transforms3d.euler.euler2quat(0, 0, self.theta)
         odom_msg.pose.pose.orientation.x = q[1]
         odom_msg.pose.pose.orientation.y = q[2]
         odom_msg.pose.pose.orientation.z = q[3]
         odom_msg.pose.pose.orientation.w = q[0]
 
+        # Covariance matrix (NEW SECTION)
+        odom_msg.pose.covariance = [0.0]*36
+        odom_msg.pose.covariance[0] = self.P[0,0]  # var x
+        odom_msg.pose.covariance[7] = self.P[1,1]   # var y
+        odom_msg.pose.covariance[35] = self.P[2,2]  # var theta
+        odom_msg.pose.covariance[1] = self.P[0,1]   # cov xy
+        odom_msg.pose.covariance[6] = self.P[1,0]   # cov yx
+        odom_msg.pose.covariance[5] = self.P[0,2]   # cov xθ
+        odom_msg.pose.covariance[30] = self.P[2,0]  # cov θx
+        odom_msg.pose.covariance[11] = self.P[1,2]  # cov yθ
+        odom_msg.pose.covariance[31] = self.P[2,1]  # cov θy
+
         self.odom_pub.publish(odom_msg)
 
-
-
+    def publish_wheels(self):
+        self.wr_pub.publish(Float32(data=self.wr))
+        self.wl_pub.publish(Float32(data=self.wl))
 
 def main(args=None):
     rclpy.init(args=args)
