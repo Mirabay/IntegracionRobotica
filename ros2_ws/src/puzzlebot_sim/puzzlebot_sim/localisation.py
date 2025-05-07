@@ -37,9 +37,9 @@ class Localisation(Node):
         self.wl = 0.0    # Left wheel speed [rad/s]
         
         # Covariance parameters (NEW)
-        self.P = np.diag([0.0, 0.0, 0.0])  # 3x3 covariance matrix
-        self.sigma_v = 0.1   # Linear velocity noise (adjust)
-        self.sigma_w = 0.05  # Angular velocity noise (adjust)
+        self.P = np.diag([0.1, 0.1, 0.1])  # 3x3 covariance matrix
+        self.sigma_v = 0.3   # Linear velocity noise (adjust)
+        self.sigma_w = 0.2  # Angular velocity noise (adjust)
         
         # Timing control
         self.prev_time = self.get_clock().now().nanoseconds
@@ -48,23 +48,26 @@ class Localisation(Node):
         self.create_timer(0.002, self.timer_callback)
 
     def timer_callback(self):
+        current_time = self.get_clock().now().nanoseconds
+        dt = (current_time - self.prev_time) * 1e-9
+        
         # Calculate velocities
         v = self.r * (self.wr + self.wl) / 2.0
         w = self.r * (self.wr - self.wl) / self.L
         
         # Update pose and covariance (UPDATED)
-        self.update_pose(v, w)
-        self.update_covariance(v, w)  # NEW METHOD
+        self.update_pose(v, w, dt)
+        self.update_covariance(v, w, dt)  # NEW METHOD
+        
+        # Update time
+        self.prev_time = current_time 
         
         # Publish odometry
         self.publish_odometry()
         self.publish_wheels()
 
     # NEW METHOD: Covariance propagation
-    def update_covariance(self, v, w):
-        current_time = self.get_clock().now().nanoseconds
-        dt = (current_time - self.prev_time) * 1e-9
-        
+    def update_covariance(self, v, w,dt):
         # Jacobian matrices
         J_x = np.array([
             [1, 0, -v * dt * np.sin(self.theta)],
@@ -90,18 +93,13 @@ class Localisation(Node):
     def wl_callback(self, msg):
         self.wl = msg.data
 
-    def update_pose(self, v, w):
-        current_time = self.get_clock().now().nanoseconds
-        dt = (current_time - self.prev_time) * 1e-9
-        
+    def update_pose(self, v, w, dt):
         # Update position and orientation
         self.x += v * np.cos(self.theta) * dt
         self.y += v * np.sin(self.theta) * dt
         self.theta += w * dt
-        
         # Normalize angle
         self.theta = np.arctan2(np.sin(self.theta), np.cos(self.theta))
-        self.prev_time = current_time
         
     def publish_odometry(self):
         odom_msg = Odometry()
