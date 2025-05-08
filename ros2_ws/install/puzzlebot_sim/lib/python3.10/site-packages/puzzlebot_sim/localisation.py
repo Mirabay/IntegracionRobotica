@@ -36,10 +36,13 @@ class Localisation(Node):
         self.wr = 0.0    # Right wheel speed [rad/s]
         self.wl = 0.0    # Left wheel speed [rad/s]
         
-        # Covariance parameters (NEW)
+        # Covariance parameters
         self.P = np.diag([0.1, 0.1, 0.1])  # 3x3 covariance matrix
-        self.sigma_v = 0.3   # Linear velocity noise (adjust)
-        self.sigma_w = 0.2  # Angular velocity noise (adjust)
+        self.A = 1e-9  # Variance of x
+        self.B = 1e-9  # Variance of y
+        self.C = 5e-15  # Variance of theta
+        # self.sigma_v = 0.3   # Linear velocity noise (adjust)
+        # self.sigma_w = 0.2  # Angular velocity noise (adjust)
         
         # Timing control
         self.prev_time = self.get_clock().now().nanoseconds
@@ -69,24 +72,29 @@ class Localisation(Node):
     # NEW METHOD: Covariance propagation
     def update_covariance(self, v, w,dt):
         # Jacobian matrices
-        J_x = np.array([
+        J_h = np.array([
             [1, 0, -v * dt * np.sin(self.theta)],
             [0, 1, v * dt * np.cos(self.theta)],
             [0, 0, 1]
         ])
         
-        J_u = np.array([
-            [dt * np.cos(self.theta), -0.5 * v * dt**2 * np.sin(self.theta)],
-            [dt * np.sin(self.theta), 0.5 * v * dt**2 * np.cos(self.theta)],
-            [0, dt]
-        ])
+        # J_u = np.array([
+        #     [dt * np.cos(self.theta), -0.5 * v * dt**2 * np.sin(self.theta)],
+        #     [dt * np.sin(self.theta), 0.5 * v * dt**2 * np.cos(self.theta)],
+        #     [0, dt]
+        # ])
         
         # Process noise covariance
-        Q = np.diag([self.sigma_v**2, self.sigma_w**2])
+        # Q = np.diag([self.sigma_v**2, self.sigma_w**2]) # [2x2]
+        # self.P = J_h @ self.P @ J_h.T + J_u @ Q @ J_u.T   
         
+        Q = np.array([
+            [self.A,self.B,self.B],
+            [self.B,self.A,self.B],
+            [self.B,self.B,self.C]
+        ])
         # Covariance propagation
-        self.P = J_x @ self.P @ J_x.T + J_u @ Q @ J_u.T
-
+        self.P = J_h @ self.P @ J_h.T + Q
     def wr_callback(self, msg):
         self.wr = msg.data
 

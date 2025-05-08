@@ -125,12 +125,12 @@ def generate_launch_description():
                              rviz2_pub_node,
                              
                              # Debug
-                             rqt_tf_tree_node,
-                             rqt_graph_node,
+                            #  rqt_tf_tree_node,
+                            #  rqt_graph_node,  
                             
                             # Control y Rutinas de movimiento
                              point_stabilisation_node,
-                             shape_drawer,
+                            #  shape_drawer,
                             # teleop_keyboard_node
                              ])
 
