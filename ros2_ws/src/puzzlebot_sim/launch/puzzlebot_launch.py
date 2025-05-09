@@ -92,7 +92,7 @@ def generate_launch_description():
             'use_sim_time': True
         }],
         remappings=[
-            ('cmd_vel', '/puzzlebot/cmd_vel')
+            ('cmd_vel', '/cmd_vel')
         ]
     )
     
@@ -105,18 +105,18 @@ def generate_launch_description():
             'use_sim_time': True
         }],
         remappings=[
-            ('cmd_vel', '/puzzlebot/cmd_vel')
+            ('cmd_vel', '/cmd_vel')
         ]
     )
 
     l_d = LaunchDescription([
                             # para que no haya problema conectado a internet
                             # SetEnvironmentVariable('ROS_LOCALHOST_ONLY', '1'),
-                            SetEnvironmentVariable('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'),
-                            SetEnvironmentVariable('CYCLONEDDS_URI', 'file:///dev/null'),
+                            # SetEnvironmentVariable('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'),
+                            # SetEnvironmentVariable('CYCLONEDDS_URI', 'file:///dev/null'),
                             
                             # Modelo Matematico y Odometria
-                             puzzlebot_sim,
+                            #  puzzlebot_sim, # Comenta esto cuando estes usando el puzzlebot Real
                              localisation_node,
                              
                              # Simulacion
@@ -133,7 +133,6 @@ def generate_launch_description():
                             #  shape_drawer,
                             # teleop_keyboard_node
                              ])
-
     return l_d
 
 # puzzlebot_sim puzzlebot_launch.py shape:='triangle' size:='.2'

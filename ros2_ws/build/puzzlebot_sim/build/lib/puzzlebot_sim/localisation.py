@@ -15,9 +15,9 @@ class Localisation(Node):
 
         # Create subscribers
         self.wr_sub = self.create_subscription(
-            Float32, 'wr', self.wr_callback, qos.qos_profile_sensor_data)
+            Float32, 'VelocityEncR', self.wr_callback, qos.qos_profile_sensor_data)
         self.wl_sub = self.create_subscription(
-            Float32, 'wl', self.wl_callback, qos.qos_profile_sensor_data)
+            Float32, 'VelocityEncL', self.wl_callback, qos.qos_profile_sensor_data)
 
         # Create publishers
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
@@ -48,7 +48,7 @@ class Localisation(Node):
         self.prev_time = self.get_clock().now().nanoseconds
         self.get_logger().info("Localisation node started")
 
-        self.create_timer(0.002, self.timer_callback)
+        self.create_timer(0.01, self.timer_callback)
 
     def timer_callback(self):
         current_time = self.get_clock().now().nanoseconds
@@ -69,7 +69,7 @@ class Localisation(Node):
         self.publish_odometry()
         self.publish_wheels()
 
-    # NEW METHOD: Covariance propagation
+    # NEW METHOD: Covariance propagation    
     def update_covariance(self, v, w,dt):
         # Jacobian matrices
         J_h = np.array([

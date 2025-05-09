@@ -6,17 +6,20 @@ from std_msgs.msg import Bool
 import math
 import transforms3d
 
+#   You are looking for this comand
+#   ros2 topic pub /goal geometry_msgs/msg/Point "{x: 1.0, y: 0.0, z: 0.0}" --once 
+
 class point_stabilisation_controller(Node):
     def __init__(self):
         super().__init__('point_stabilisation_controller')
         
         # Parámetros del controlador
-        self.kp_linear = 0.5
-        self.kp_angular = 0.2
-        self.max_linear_speed = 5.0
-        self.max_angular_speed = 3.0
-        self.goal_tolerance = 0.1
-        self.angular_tolerance = math.radians(5)  # 5 grados en radianes
+        self.kp_linear = 0.2
+        self.kp_angular = 0.7
+        self.max_linear_speed = 0.6# Mueves esto y ya no furula
+        self.max_angular_speed = 0.05
+        self.goal_tolerance = 0.09
+        self.angular_tolerance = math.radians(10)  # 5 grados en radianes
         
         # Estado del robot
         self.current_pose = Point()
@@ -43,9 +46,9 @@ class point_stabilisation_controller(Node):
         self.goal_reached_pub = self.create_publisher(Bool, 'goal_reached', 10)
         
         # Timer de control
-        self.control_timer = self.create_timer(0.002, self.control_loop)
+        self.control_timer = self.create_timer(0.01, self.control_loop)
         
-        self.get_logger().info("Control de navegación listo")
+        self.get_logger().info("Control de navegación listo")   
 
     def goal_callback(self, msg):
         self.goal_pose = msg
@@ -61,6 +64,7 @@ class point_stabilisation_controller(Node):
 
     def control_loop(self):
         if self.goal_pose is None or self.goal_reached:
+            self.detener_robot()
             return
             
         dx = self.goal_pose.x - self.current_pose.x
@@ -117,6 +121,9 @@ class point_stabilisation_controller(Node):
 
     def detener_robot(self):
         cmd_vel = Twist()
+        cmd_vel.linear.x = 0.0
+        cmd_vel.linear.y = 0.0
+        cmd_vel.angular.z = 0.0
         self.cmd_vel_pub.publish(cmd_vel)
 
 def main(args=None):
