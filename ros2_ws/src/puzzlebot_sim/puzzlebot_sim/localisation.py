@@ -39,14 +39,13 @@ class Localisation(Node):
         self.wr = 0.0    # Right wheel speed [rad/s]
         self.wl = 0.0    # Left wheel speed [rad/s]
         
+        ## NO TOCAR !!!
         # Covariance parameters
         self.P = np.diag([0.0, 0.0, 0.0])  # 3x3 covariance matrix
-        self.A = 8.85e-4   # Varianza promedio x e y (0.000885 m²)
-        self.B = -4.6e-5   # Covarianza xy (-0.000046 m²)
-        self.C = 6.08e-4   # Varianza theta (0.000608 rad²)
+        self.A = 8.85e-5   # Varianza promedio x e y (0.000885 m²)
+        self.B = -4.6e-6   # Covarianza xy (-0.000046 m²)
+        self.C = 6.08e-5   # Varianza theta (0.000608 rad²)
         
-        # self.sigma_v = 0.3   # Linear velocity noise (adjust)
-        # self.sigma_w = 0.2  # Angular velocity noise (adjust)
         
         # Timing control
         self.prev_time = self.get_clock().now().nanoseconds
