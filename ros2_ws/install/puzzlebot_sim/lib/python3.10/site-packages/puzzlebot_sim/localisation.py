@@ -12,12 +12,15 @@ class Localisation(Node):
 
     def __init__(self): 
         super().__init__('localisation') 
-
+        
+        self.declare_parameter('wr', 'wr')
+        self.declare_parameter('wl', 'wl')
+        
         # Create subscribers
         self.wr_sub = self.create_subscription(
-            Float32, 'VelocityEncR', self.wr_callback, qos.qos_profile_sensor_data)
+            Float32, self.get_parameter('wr').value, self.wr_callback, qos.qos_profile_sensor_data)
         self.wl_sub = self.create_subscription(
-            Float32, 'VelocityEncL', self.wl_callback, qos.qos_profile_sensor_data)
+            Float32,self.get_parameter('wl').value, self.wl_callback, qos.qos_profile_sensor_data)
 
         # Create publishers
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)

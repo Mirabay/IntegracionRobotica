@@ -12,12 +12,15 @@ class Localisation(Node):
 
     def __init__(self): 
         super().__init__('localisation') 
-
+        
+        self.declare_parameter('wr', 'wr')
+        self.declare_parameter('wl', 'wl')
+        
         # Create subscribers
         self.wr_sub = self.create_subscription(
-            Float32, 'VelocityEncR', self.wr_callback, qos.qos_profile_sensor_data)
+            Float32, self.get_parameter('wr').value, self.wr_callback, qos.qos_profile_sensor_data)
         self.wl_sub = self.create_subscription(
-            Float32, 'VelocityEncL', self.wl_callback, qos.qos_profile_sensor_data)
+            Float32,self.get_parameter('wl').value, self.wl_callback, qos.qos_profile_sensor_data)
 
         # Create publishers
         self.odom_pub = self.create_publisher(Odometry, 'odom', 10)
@@ -37,10 +40,11 @@ class Localisation(Node):
         self.wl = 0.0    # Left wheel speed [rad/s]
         
         # Covariance parameters
-        self.P = np.diag([0.1, 0.1, 0.1])  # 3x3 covariance matrix
-        self.A = 1e-9  # Variance of x
-        self.B = 1e-9  # Variance of y
-        self.C = 5e-15  # Variance of theta
+        self.P = np.diag([0.0, 0.0, 0.0])  # 3x3 covariance matrix
+        self.A = 8.85e-4   # Varianza promedio x e y (0.000885 m²)
+        self.B = -4.6e-5   # Covarianza xy (-0.000046 m²)
+        self.C = 6.08e-4   # Varianza theta (0.000608 rad²)
+        
         # self.sigma_v = 0.3   # Linear velocity noise (adjust)
         # self.sigma_w = 0.2  # Angular velocity noise (adjust)
         

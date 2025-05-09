@@ -116,7 +116,7 @@ def generate_launch_description():
                             # SetEnvironmentVariable('CYCLONEDDS_URI', 'file:///dev/null'),
                             
                             # Modelo Matematico y Odometria
-                            #  puzzlebot_sim, # Comenta esto cuando estes usando el puzzlebot Real
+                             puzzlebot_sim, # Comenta esto cuando estes usando el puzzlebot Real
                              localisation_node,
                              
                              # Simulacion
